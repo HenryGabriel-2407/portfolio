@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+        /* aplica tema salvo antes do primeiro paint (evita flash) */
+        try {
+            var t = localStorage.getItem('hg-theme');
+            if (t === 'light' || t === 'dark') document.documentElement.setAttribute('data-theme', t);
+        } catch (e) {}
+    </script>
+    <title>Henry Gabriel — Analista de Dados & Automação</title>
+    <meta name="description" content="Portfólio de Henry Gabriel Carvalho Soares — Análise de Dados, automação de processos com Python, dashboards em Power BI e ETL. Itapema/SC.">
+    <meta name="keywords" content="Henry Gabriel, Analista de Dados, Python, Power BI, SQL, Automação, ETL, Itapema, Santa Catarina">
+    <meta name="author" content="Henry Gabriel Carvalho Soares">
+    <meta name="theme-color" content="#07090f">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Henry Gabriel — Analista de Dados & Automação">
+    <meta property="og:description" content="Transformo dados em decisões: Python, SQL, Power BI e automação de processos.">
+    <meta property="og:image" content="assets/img/banner-henry.jpg">
+    <meta property="og:locale" content="pt_BR">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <link rel="icon" type="image/png" href="assets/img/code.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Henry Gabriel Carvalho Soares",
+      "jobTitle": "Data Analyst",
+      "email": "mailto:henrygabriel2407@gmail.com",
+      "address": { "@type": "PostalAddress", "addressLocality": "Itapema", "addressRegion": "SC", "addressCountry": "BR" },
+      "sameAs": [
+        "https://github.com/HenryGabriel-2407",
+        "https://linkedin.com/in/henrygabriel040724/",
+        "https://www.instagram.com/henry._.gabriel2407/"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<div class="progress-bar" id="progressBar"></div>
+
+<!-- ============ NAVBAR ============ -->
+<header class="navbar" id="navbar">
+    <nav class="nav-container">
+        <a href="#inicio" class="logo">hg<span>.</span></a>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#inicio" class="nav-link active" data-i18n="nav.home">Início</a></li>
+            <li><a href="#sobre" class="nav-link" data-i18n="nav.about">Sobre</a></li>
+            <li><a href="#servicos" class="nav-link" data-i18n="nav.services">Serviços</a></li>
+            <li><a href="#projetos" class="nav-link" data-i18n="nav.projects">Projetos</a></li>
+            <li><a href="#experiencia" class="nav-link" data-i18n="nav.experience">Experiência</a></li>
+            <li><a href="#skills" class="nav-link" data-i18n="nav.skills">Skills</a></li>
+            <li><a href="#certificados" class="nav-link" data-i18n="nav.certs">Certificados</a></li>
+            <li><a href="#contato" class="nav-link nav-cta" data-i18n="nav.contact">Contato</a></li>
+        </ul>
+        <div class="nav-actions">
+            <div class="lang-wrap">
+                <button id="langToggle" class="icon-action" aria-label="Mudar idioma" title="Language">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span class="lang-code" id="langCode">PT</span>
+                </button>
+                <div class="lang-menu glass" id="langMenu">
+                    <button class="lang-opt active" data-lang="pt"><span>🇧🇷</span> Português (BR)</button>
+                    <button class="lang-opt" data-lang="en"><span>🇺🇸</span> English</button>
+                    <button class="lang-opt" data-lang="es"><span>🇪🇸</span> Español</button>
+                </div>
+            </div>
+            <button id="themeToggle" class="icon-action" aria-label="Alternar tema claro/escuro" title="Theme">
+                <svg class="icon-sun" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>
+                <svg class="icon-moon" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+            </button>
+            <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="inicio">
+    <div class="hero-bg">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    <div class="hero-container">
+        <div class="hero-content reveal">
+            <span class="hero-badge"><span class="pulse-dot"></span> <span data-i18n="hero.badge">Disponível para novos projetos</span></span>
+            <h1><span data-i18n="hero.hello">Olá, eu sou</span><br><span class="gradient-text">Henry Gabriel</span></h1>
+            <p class="hero-typing"><span id="typing"></span><span class="cursor">|</span></p>
+            <p class="hero-desc" data-i18n-html="hero.desc">Transformo dados brutos em decisões rápidas. Da gestão do meu próprio negócio à consultoria, aplico <strong>Python, SQL e Power BI</strong> para automatizar processos e gerar insights que funcionam na prática.</p>
+            <div class="hero-actions">
+                <a href="#projetos" class="btn btn-primary"><span data-i18n="hero.btnProjects">Ver projetos</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+                <a href="assets/docs/henry-gabriel-curriculo-ptbr.pdf" target="_blank" rel="noopener" class="btn btn-ghost" id="cvLink">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    <span data-i18n="hero.btnCv">Currículo</span>
+                </a>
+            </div>
+            <div class="hero-social">
+                <a href="https://github.com/HenryGabriel-2407" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+                </a>
+                <a href="https://linkedin.com/in/henrygabriel040724/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                </a>
+                <a href="https://www.instagram.com/henry._.gabriel2407/" target="_blank" rel="noopener" aria-label="Instagram" title="Instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+                </a>
+                <a href="mailto:henrygabriel2407@gmail.com" aria-label="E-mail" title="E-mail">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="hero-visual reveal delay-2">
+            <div class="photo-frame">
+                <img src="assets/img/henry-foto.jpg" alt="Foto de Henry Gabriel Carvalho Soares" draggable="false">
+                <div class="frame-ring"></div>
+            </div>
+            <div class="float-card float-card-1 glass">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="2" stroke-linecap="round"><path d="M3 3v18h18"/><path d="m19 9-5 5-4-4-3 3"/></svg>
+                <svg width="0" height="0"><defs><linearGradient id="g1" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#a78bfa"/><stop offset="1" stop-color="#22d3ee"/></linearGradient></defs></svg>
+                <div><strong data-i18n="hero.float1t">Dados → Decisão</strong><span data-i18n="hero.float1s">análise aplicada</span></div>
+            </div>
+            <div class="float-card float-card-2 glass">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                <div><strong data-i18n="hero.float2t">Horas → Minutos</strong><span data-i18n="hero.float2s">automação real</span></div>
+            </div>
+        </div>
+    </div>
+    <a href="#sobre" class="scroll-hint" aria-label="Rolar para baixo">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+    </a>
+</section>
+
+<!-- ============ SOBRE ============ -->
+<section class="section" id="sobre">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="about.tag">// sobre mim</span>
+            <h2 data-i18n-html="about.h2">Quem está por trás <span class="gradient-text">dos dados</span></h2>
+        </div>
+        <div class="about-grid">
+            <div class="about-text reveal">
+                <p data-i18n-html="about.p1">Sou estudante de <strong>Sistemas de Informação</strong> com foco em análise de dados e automação em contextos reais. Minha trajetória é diferente da maioria: antes de escrever linhas de código, aprendi a resolver problemas reais <strong>gerenciando meu próprio negócio</strong> como sócio-proprietário do Empório Bodoski.</p>
+                <p data-i18n-html="about.p2">Hoje, como estagiário de TI na <strong>HS Consultoria</strong>, atuo com análise de dados aplicada à engenharia de petróleo e biocombustíveis — automatizando documentos regulatórios em Python, estruturando fluxos de dados e construindo dashboards interativos.</p>
+                <p data-i18n-html="about.p3">Gosto do momento em que um dado bruto vira uma decisão clara. É isso que busco entregar em cada projeto.</p>
+            </div>
+            <div class="about-cards">
+                <div class="about-card glass reveal delay-1">
+                    <span class="about-icon">🎓</span>
+                    <h3 data-i18n="about.c1t">Estudante</h3>
+                    <p data-i18n="about.c1p">Sistemas de Informação — Avantis (2023–2026), foco em dados e automação.</p>
+                </div>
+                <div class="about-card glass reveal delay-2">
+                    <span class="about-icon">🏪</span>
+                    <h3 data-i18n="about.c2t">Sócio-proprietário</h3>
+                    <p data-i18n="about.c2p">Empório Bodoski (2022–2023): gestão, estoque e processos na prática.</p>
+                </div>
+                <div class="about-card glass reveal delay-3">
+                    <span class="about-icon">⚡</span>
+                    <h3 data-i18n="about.c3t">Estagiário de TI</h3>
+                    <p data-i18n="about.c3p">HS Consultoria (2023–atual): dados no setor de petróleo e biocombustíveis.</p>
+                </div>
+            </div>
+        </div>
+        <div class="stats-row reveal">
+            <div class="stat"><strong data-count="10">0</strong><span data-i18n="about.s1">cursos concluídos</span></div>
+            <div class="stat"><strong data-count="155">0</strong><span data-i18n="about.s2">+ horas de formação</span></div>
+            <div class="stat"><strong data-count="3">0</strong><span data-i18n="about.s3">idiomas em estudo</span></div>
+            <div class="stat"><strong data-count="20">0</strong><span data-i18n="about.s4">+ repos no GitHub</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SERVIÇOS ============ -->
+<section class="section section-alt" id="servicos">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="srv.tag">// serviços</span>
+            <h2 data-i18n-html="srv.h2">Como posso ajudar <span class="gradient-text">seu negócio</span></h2>
+            <p data-i18n="srv.p">Soluções sob medida para empresas que querem parar de perder tempo com processos manuais.</p>
+        </div>
+        <div class="services-grid">
+            <div class="service-card glass reveal">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4M6 8l2 2-2 2M11 12h4"/></svg>
+                </div>
+                <h3 data-i18n="srv.c1t">Automação de Processos</h3>
+                <p data-i18n="srv.c1p">Tarefas repetitivas em Python: geração de documentos, envio de e-mails em massa, consolidação de planilhas. De horas para minutos.</p>
+                <span class="service-tags">Python · Scripts · SMTP</span>
+            </div>
+            <div class="service-card glass reveal delay-1">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><rect x="7" y="12" width="3" height="6" rx=".5"/><rect x="12" y="8" width="3" height="10" rx=".5"/><rect x="17" y="4" width="3" height="14" rx=".5"/></svg>
+                </div>
+                <h3 data-i18n="srv.c2t">Dashboards Interativos</h3>
+                <p data-i18n="srv.c2p">Visualizações claras em Power BI ou Excel para acompanhar indicadores em tempo real e apoiar decisões estratégicas.</p>
+                <span class="service-tags">Power BI · Excel · KPIs</span>
+            </div>
+            <div class="service-card glass reveal delay-2">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                </div>
+                <h3 data-i18n="srv.c3t">ETL & Tratamento de Dados</h3>
+                <p data-i18n="srv.c3p">Coleta, limpeza e estruturação de dados espalhados em planilhas e sistemas — prontos para análise confiável.</p>
+                <span class="service-tags">Pandas · SQL · Pipelines</span>
+            </div>
+            <div class="service-card glass reveal delay-3">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg>
+                </div>
+                <h3 data-i18n="srv.c4t">Integração de APIs</h3>
+                <p data-i18n="srv.c4p">Conexão entre sistemas via APIs REST: seus dados fluindo automaticamente entre plataformas sem retrabalho.</p>
+                <span class="service-tags">REST · FastAPI · Back-end</span>
+            </div>
+        </div>
+        <div class="services-cta reveal">
+            <p data-i18n="srv.ctaP">Precisa de algo específico?</p>
+            <a href="#contato" class="btn btn-primary" data-i18n="srv.ctaBtn">Solicitar orçamento</a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ PROJETOS ============ -->
+<section class="section" id="projetos">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="prj.tag">// projetos</span>
+            <h2 data-i18n-html="prj.h2">Cases & <span class="gradient-text">projetos</span></h2>
+        </div>
+
+        <!-- Case destaque -->
+        <article class="featured-project glass reveal">
+            <div class="featured-info">
+                <span class="project-flag" data-i18n="prj.ftFlag">⭐ Case principal</span>
+                <h3 data-i18n="prj.ftTitle">Automação de Certificados de Eventos</h3>
+                <div class="case-blocks">
+                    <div class="case-block">
+                        <strong data-i18n="prj.ftPbT">O problema</strong>
+                        <p data-i18n="prj.ftPbP">Emitir certificados manualmente para cada participante consumia horas de trabalho repetitivo por evento.</p>
+                    </div>
+                    <div class="case-block">
+                        <strong data-i18n="prj.ftSolT">A solução</strong>
+                        <p data-i18n="prj.ftSolP">Sistema em Python que lê planilhas Excel de participantes, gera certificados personalizados em massa e envia tudo automaticamente por e-mail (SMTP).</p>
+                    </div>
+                    <div class="case-block case-result">
+                        <strong data-i18n="prj.ftResT">O resultado</strong>
+                        <p data-i18n-html="prj.ftResP">Redução de <em>horas</em> de trabalho manual para <em>minutos</em> por evento — zero erro de digitação.</p>
+                    </div>
+                </div>
+                <div class="project-stack">
+                    <span>Python</span><span>pandas / openpyxl</span><span>SMTP</span><span>Excel</span>
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/HenryGabriel-2407" target="_blank" rel="noopener" class="btn btn-small btn-primary">
+                        <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+                        <span data-i18n="prj.ftBtn">Ver no GitHub</span>
+                    </a>
+                </div>
+            </div>
+            <div class="featured-visual">
+                <div class="terminal glass">
+                    <div class="terminal-bar"><span></span><span></span><span></span><em>gerar_certificados.py</em></div>
+                    <pre><code><span class="t-c"># Entrada → processamento → saída</span>
+participantes = <span class="t-f">ler_planilha</span>(<span class="t-s">"inscritos.xlsx"</span>)
+<span class="t-k">for</span> pessoa <span class="t-k">in</span> participantes:
+    certificado = <span class="t-f">gerar_pdf</span>(pessoa)
+    <span class="t-f">enviar_email</span>(certificado, pessoa.email)
+
+<span class="t-ok">✓ 250 certificados enviados</span>
+<span class="t-ok">✓ Tempo total: 3 min 12 s</span></code></pre>
+                </div>
+            </div>
+        </article>
+
+        <!-- Grid de projetos -->
+        <div class="projects-grid">
+            <article class="project-card glass reveal">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l1-5h16l1 5"/><path d="M3 9v11a1 1 0 0 0 1 1h16a1 1 0 0 0 1-1V9"/><path d="M3 9a2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 4 0 2 2 0 0 0 2 0"/><path d="M9 21v-6a1 1 0 0 1 1-1h4a1 1 0 0 1 1 1v6"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407" target="_blank" rel="noopener" aria-label="Repositório"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <span class="project-flag" data-i18n="prj.bcFlag">⭐ Cliente real · Out 2024</span>
+                <h3 data-i18n="prj.bcTitle">Site Belo Conceito</h3>
+                <p data-i18n="prj.bcP">Site institucional para loja de móveis planejados em Itapema/SC: catálogo com galeria e lightbox, FAQ interativo, slideshow, carrossel de produtos e contato direto via WhatsApp — com documentação técnica completa.</p>
+                <ul class="project-stack"><li>HTML</li><li>CSS</li><li>JavaScript</li><li data-i18n="stk.responsive">Responsivo</li></ul>
+            </article>
+            <article class="project-card glass reveal">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M10 4v4H2M22 10H10"/><path d="m7 14-2 2 2 2M13 18h5"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407/garcom-digital-app" target="_blank" rel="noopener" aria-label="Repositório"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <h3 data-i18n="prj.garTitle">Garçom Digital App</h3>
+                <p data-i18n="prj.garP">Aplicativo de pedidos digitais para restaurantes: clientes montam pedidos direto pelo celular, agilizando o atendimento na mesa.</p>
+                <ul class="project-stack"><li>TypeScript</li><li>Front-end</li><li>UX</li></ul>
+            </article>
+            <article class="project-card glass reveal delay-1">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 21h8M12 17v4M4 3h16v6a8 8 0 0 1-16 0V3z"/><path d="M17 5h4v2a3 3 0 0 1-3 3M7 5H3v2a3 3 0 0 0 3 3"/><path d="M12 17v-4"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407/Pizzaria-Forno-di-Resistenza" target="_blank" rel="noopener" aria-label="Repositório"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <h3>Forno di Resistenza</h3>
+                <p data-i18n="prj.forP">Sistema completo para pizzaria: gestão de pedidos, menu e operação desenvolvida em Python com foco em simplicidade.</p>
+                <ul class="project-stack"><li>Python</li><li data-i18n="stk.logic">Lógica</li><li>MIT</li></ul>
+            </article>
+            <article class="project-card glass reveal delay-2">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407/Data-Analysis-Python" target="_blank" rel="noopener" aria-label="Repositório"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <h3 data-i18n="prj.datTitle">Data Analysis com Python</h3>
+                <p data-i18n="prj.datP">Análise exploratória de dados com pandas: limpeza, estatísticas descritivas e visualização de padrões em datasets reais.</p>
+                <ul class="project-stack"><li>Python</li><li>pandas</li><li data-i18n="stk.analytics">Análise</li></ul>
+            </article>
+            <article class="project-card glass reveal">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9M4 4a16 16 0 0 1 16 16"/><circle cx="5" cy="19" r="1"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407/FastApi" target="_blank" rel="noopener" aria-label="Repositório"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <h3>API REST com FastAPI</h3>
+                <p data-i18n="prj.apiP">Desenvolvimento de APIs REST modernas com FastAPI: rotas, validação de dados e documentação automática.</p>
+                <ul class="project-stack"><li>Python</li><li>FastAPI</li><li>REST</li></ul>
+            </article>
+            <article class="project-card glass reveal delay-1">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/><path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407/Database-with-IA" target="_blank" rel="noopener" aria-label="Repositório"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <h3>Database with IA</h3>
+                <p data-i18n="prj.dbP">Exploração da intersecção entre bancos de dados e inteligência artificial: consultas e tratamento assistidos por IA.</p>
+                <ul class="project-stack"><li>Python</li><li>SQL</li><li data-i18n="stk.ai">IA</li></ul>
+            </article>
+            <article class="project-card glass reveal delay-2">
+                <div class="project-top">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M16 18 22 12 16 6M8 6l-6 6 6 6"/></svg>
+                    <div class="project-ext-links">
+                        <a href="https://github.com/HenryGabriel-2407?tab=repositories" target="_blank" rel="noopener" aria-label="Todos os repositórios"><svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+                    </div>
+                </div>
+                <h3 data-i18n="prj.funTitle">Fundamentos & Estruturas</h3>
+                <p data-i18n="prj.funP">Base sólida construída na graduação: estruturas de dados em C++, RPG de turnos em Java e sistemas em C.</p>
+                <ul class="project-stack"><li>C++</li><li>Java</li><li>C</li></ul>
+            </article>
+        </div>
+    </div>
+</section>
+
+<!-- ============ EXPERIÊNCIA ============ -->
+<section class="section section-alt" id="experiencia">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="exp.tag">// trajetória</span>
+            <h2 data-i18n-html="exp.h2">Experiência & <span class="gradient-text">formação</span></h2>
+        </div>
+        <div class="timeline">
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass">
+                    <span class="timeline-date" data-i18n="exp.i1date">2023 — atual</span>
+                    <h3 data-i18n="exp.i1title">Estágio de Tecnologia da Informação</h3>
+                    <span class="timeline-company" data-i18n="exp.i1co">HS Consultoria · Petróleo & Biocombustíveis</span>
+                    <ul>
+                        <li data-i18n="exp.i1b1">Análise de dados aplicada à engenharia, transformando dados brutos em informação estratégica para tomada de decisão.</li>
+                        <li data-i18n="exp.i1b2">Automação de processos críticos em Python — geração de documentos regulatórios com menos tempo e menos erros.</li>
+                        <li data-i18n="exp.i1b3">Elaboração de relatórios técnicos e dashboards interativos, estruturando fluxos de dados confiáveis.</li>
+                        <li data-i18n="exp.i1b4">Apoio na produção de relatórios e defesas jurídicas, traduzindo dados técnicos em conteúdo claro e objetivo.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass">
+                    <span class="timeline-date">2022 — 2023</span>
+                    <h3 data-i18n="exp.i2title">Sócio-proprietário</h3>
+                    <span class="timeline-company">Empório Bodoski</span>
+                    <ul>
+                        <li data-i18n="exp.i2b1">Gestão de equipe multidisciplinar alinhada aos objetivos estratégicos do negócio.</li>
+                        <li data-i18n="exp.i2b2">Automação e organização de dados para controle de estoque e pedidos, reduzindo falhas operacionais.</li>
+                        <li data-i18n="exp.i2b3">Melhoria da eficiência da cadeia de suprimentos com visão de dono — cada ponto percentual importava.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="timeline-item reveal">
+                <div class="timeline-dot"></div>
+                <div class="timeline-card glass">
+                    <span class="timeline-date" data-i18n="exp.i3date">2023 — 2026 (cursando)</span>
+                    <h3 data-i18n="exp.i3title">Bacharelado em Sistemas de Informação</h3>
+                    <span class="timeline-company">Avantis · Balneário Camboriú/SC</span>
+                    <ul>
+                        <li data-i18n="exp.i3b1">Foco em análise de dados, engenharia de software e infraestrutura.</li>
+                        <li data-i18n="exp.i3b2">Projetos práticos em C++, Java, Python e desenvolvimento web.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ SKILLS ============ -->
+<section class="section" id="skills">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="skl.tag">// skills</span>
+            <h2 data-i18n-html="skl.h2">Tecnologias & <span class="gradient-text">competências</span></h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-group glass reveal">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m18 16 4-4-4-4M6 8l-4 4 4 4M14.5 4l-5 16"/></svg>
+                    <span data-i18n="skl.g1">Linguagens & Dados</span>
+                </h3>
+                <div class="chips">
+                    <span class="chip chip-hi">Python</span><span class="chip chip-hi">SQL</span><span class="chip chip-hi">Power BI</span><span class="chip chip-hi">Excel Avançado</span>
+                </div>
+            </div>
+            <div class="skill-group glass reveal delay-1">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+                    <span data-i18n="skl.g2">Automação & Engenharia</span>
+                </h3>
+                <div class="chips">
+                    <span class="chip" data-i18n="skl.etl">ETL & Pipelines</span><span class="chip">APIs REST</span><span class="chip">SMTP / E-mail</span><span class="chip" data-i18n="skl.backend">Back-end</span><span class="chip" data-i18n="skl.danalytics">Análise de Dados</span>
+                </div>
+            </div>
+            <div class="skill-group glass reveal delay-2">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+                    <span data-i18n="skl.g3">Infra & Ferramentas</span>
+                </h3>
+                <div class="chips">
+                    <span class="chip">Docker</span><span class="chip">Git & GitHub</span><span class="chip" data-i18n="skl.networks">Redes de Computadores</span><span class="chip" data-i18n="skl.cybersec">Cibersegurança</span><span class="chip" data-i18n="skl.genai">IA Generativa</span><span class="chip" data-i18n="skl.embedded">Sistemas Embarcados · em estudo</span>
+                </div>
+            </div>
+            <div class="skill-group glass reveal delay-3">
+                <h3>
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                    <span data-i18n="skl.g4">Idiomas</span>
+                </h3>
+                <div class="chips">
+                    <span class="chip" data-i18n="skl.lpt">🇧🇷 Português — nativo</span><span class="chip" data-i18n="skl.len">🇺🇸 Inglês — intermediário</span><span class="chip" data-i18n="skl.les">🇪🇸 Espanhol — intermediário</span><span class="chip" data-i18n="skl.ljp">🇯🇵 Japonês — intermediário</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ============ CERTIFICADOS ============ -->
+<section class="section section-alt" id="certificados">
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="crt.tag">// certificados</span>
+            <h2 data-i18n-html="crt.h2">Formação <span class="gradient-text">comprovada</span></h2>
+            <p data-i18n-html="crt.p">Clique em qualquer certificado para visualizar. <em>Visualização protegida — os documentos não podem ser baixados ou copiados.</em></p>
+        </div>
+        <div class="certs-grid" id="certsGrid"><!-- preenchido via JS --></div>
+    </div>
+</section>
+
+<!-- ============ CONTATO ============ -->
+<section class="section contact-section" id="contato">
+    <div class="hero-bg">
+        <div class="orb orb-2"></div>
+        <div class="grid-overlay"></div>
+    </div>
+    <div class="container">
+        <div class="section-head reveal">
+            <span class="section-tag" data-i18n="ct.tag">// contato</span>
+            <h2 data-i18n-html="ct.h2">Vamos construir algo <span class="gradient-text">juntos?</span></h2>
+            <p data-i18n="ct.p">Disponível para oportunidades CLT em dados e para projetos PJ de automação e BI.</p>
+        </div>
+        <div class="contact-grid">
+            <a href="mailto:henrygabriel2407@gmail.com" class="contact-card glass reveal" id="emailCard">
+                <div class="contact-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div><strong data-i18n="ct.email">E-mail</strong><span>henrygabriel2407@gmail.com</span></div>
+                <button class="copy-btn" id="copyEmail" title="Copiar e-mail" onclick="event.preventDefault(); event.stopPropagation();">
+                    <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+                </button>
+            </a>
+            <a href="https://www.linkedin.com/in/henrygabriel040724/" target="_blank" rel="noopener" class="contact-card glass reveal delay-1">
+                <div class="contact-icon linkedin">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+                </div>
+                <div><strong>LinkedIn</strong><span>/in/henrygabriel040724</span></div>
+            </a>
+            <a href="https://github.com/HenryGabriel-2407" target="_blank" rel="noopener" class="contact-card glass reveal delay-2">
+                <div class="contact-icon github">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>
+                </div>
+                <div><strong>GitHub</strong><span>@HenryGabriel-2407</span></div>
+            </a>
+            <a href="https://www.instagram.com/henry._.gabriel2407/" target="_blank" rel="noopener" class="contact-card glass reveal delay-3">
+                <div class="contact-icon instagram">
+                    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg>
+                </div>
+                <div><strong>Instagram</strong><span>@henry._.gabriel2407</span></div>
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ============ FOOTER ============ -->
+<footer class="footer">
+    <div class="container footer-inner">
+        <a href="#inicio" class="logo">hg<span>.</span></a>
+        <p>© <span id="year"></span> Henry Gabriel Carvalho Soares · Itapema/SC — <span data-i18n="foot.made">feito com café e Python</span> ☕🐍</p>
+        <div class="footer-social">
+            <a href="https://github.com/HenryGabriel-2407" target="_blank" rel="noopener" aria-label="GitHub"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2 0 1.9 1.2 1.9 1.2 1 1.8 2.8 1.3 3.4 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.3 2.8.1 3.2.8.8 1.3 1.9 1.3 3.2 0 4.6-2.9 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg></a>
+            <a href="https://www.linkedin.com/in/henrygabriel040724/" target="_blank" rel="noopener" aria-label="LinkedIn"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05a3.74 3.74 0 0 1 3.37-1.85c3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45z"/></svg></a>
+            <a href="https://www.instagram.com/henry._.gabriel2407/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 3.25.15 4.77 1.69 4.92 4.92.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.15 3.23-1.66 4.77-4.92 4.92-1.27.06-1.64.07-4.85.07s-3.58-.01-4.85-.07c-3.26-.15-4.77-1.7-4.92-4.92C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85C2.38 3.92 3.9 2.38 7.15 2.23 8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 2.7.27.27 2.69.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.2 4.36 2.62 6.78 6.98 6.98C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c4.35-.2 6.78-2.62 6.98-6.98.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95C23.73 2.7 21.31.27 16.95.07 15.67.01 15.26 0 12 0zm0 5.84A6.16 6.16 0 1 0 18.16 12 6.16 6.16 0 0 0 12 5.84zM12 16a4 4 0 1 1 4-4 4 4 0 0 1-4 4zm6.41-11.85a1.44 1.44 0 1 0 1.44 1.44 1.44 1.44 0 0 0-1.44-1.44z"/></svg></a>
+        </div>
+    </div>
+</footer>
+
+<button class="to-top" id="toTop" aria-label="Voltar ao topo">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 15l-6-6-6 6"/></svg>
+</button>
+
+<!-- ============ MODAL VISUALIZADOR DE CERTIFICADOS ============ -->
+<div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-label="Visualizador de certificado">
+    <div class="cert-modal-backdrop" id="modalBackdrop"></div>
+    <div class="cert-modal-box">
+        <div class="cert-modal-head">
+            <div class="cert-modal-title">
+                <strong id="modalCertTitle">—</strong>
+                <span id="modalCertMeta">—</span>
+            </div>
+            <div class="cert-modal-nav">
+                <button class="icon-btn" id="prevCert" aria-label="Certificado anterior">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button class="icon-btn" id="nextCert" aria-label="Próximo certificado">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+                <button class="icon-btn close-btn" id="closeModal" aria-label="Fechar">
+                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+                </button>
+            </div>
+        </div>
+        <div class="cert-viewer" id="certViewer">
+            <div class="cert-loader" id="certLoader"><span class="spinner"></span><span id="loaderText">carregando…</span></div>
+            <img id="certImage" alt="Certificado" draggable="false" oncontextmenu="return false;">
+            <div class="watermark" id="watermark" oncontextmenu="return false;"></div>
+            <div class="viewer-shield" oncontextmenu="return false;" title="Conteúdo protegido — somente visualização"></div>
+        </div>
+        <p class="cert-note" id="certNote">
+            <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+            <span data-i18n="crt.note">Documento protegido — exibição apenas para consulta.</span>
+        </p>
+    </div>
+</div>
+
+<script src="assets/js/main.js"></script>
+</body>
+</html>
