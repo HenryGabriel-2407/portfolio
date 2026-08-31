@@ -100,7 +100,7 @@
             <span class="hero-badge"><span class="pulse-dot"></span> <span data-i18n="hero.badge">Disponível para novos projetos</span></span>
             <h1><span data-i18n="hero.hello">Olá, eu sou</span><br><span class="gradient-text">Henry Gabriel</span></h1>
             <p class="hero-typing"><span id="typing"></span><span class="cursor">|</span></p>
-            <p class="hero-desc" data-i18n-html="hero.desc">Transformo dados brutos em decisões rápidas. Da gestão do meu próprio negócio à consultoria, aplico <strong>Python, SQL e Power BI</strong> para automatizar processos e gerar insights que funcionam na prática.</p>
+            <p class="hero-desc" data-i18n-html="hero.desc">Transformo dados brutos em decisões rápidas e ideias em aplicações reais. Do meu próprio negócio à consultoria, aplico <strong>Python, SQL, Power BI e desenvolvimento web</strong> para automatizar processos, construir interfaces e gerar insights que funcionam na prática.</p>
             <div class="hero-actions">
                 <a href="#projetos" class="btn btn-primary"><span data-i18n="hero.btnProjects">Ver projetos</span>
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
@@ -179,7 +179,7 @@
         </div>
         <div class="stats-row reveal">
             <div class="stat"><strong data-count="10">0</strong><span data-i18n="about.s1">cursos concluídos</span></div>
-            <div class="stat"><strong data-count="155">0</strong><span data-i18n="about.s2">+ horas de formação</span></div>
+            <div class="stat"><strong data-count="225">0</strong><span data-i18n="about.s2">+ horas de formação</span></div>
             <div class="stat"><strong data-count="3">0</strong><span data-i18n="about.s3">idiomas em estudo</span></div>
             <div class="stat"><strong data-count="20">0</strong><span data-i18n="about.s4">+ repos no GitHub</span></div>
         </div>
@@ -226,6 +226,14 @@
                 <h3 data-i18n="srv.c4t">Integração de APIs</h3>
                 <p data-i18n="srv.c4p">Conexão entre sistemas via APIs REST: seus dados fluindo automaticamente entre plataformas sem retrabalho.</p>
                 <span class="service-tags">REST · FastAPI · Back-end</span>
+            </div>
+            <div class="service-card glass reveal delay-3">
+                <div class="service-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m10 15-3-3 3-3M14 9l3 3-3 3"/><path d="M3 3v18h18V3H3z"/><circle cx="12" cy="12" r="1.5"/></svg>
+                </div>
+                <h3 data-i18n="srv.c5t">Desenvolvimento Web & Full Stack</h3>
+                <p data-i18n="srv.c5p">Criação de sites e aplicações web responsivas, do frontend ao backend. Interfaces modernas com HTML, CSS, JavaScript e frameworks front-end.</p>
+                <span class="service-tags">HTML · CSS · JavaScript · UX</span>
             </div>
         </div>
         <div class="services-cta reveal">
@@ -436,7 +444,7 @@ participantes = <span class="t-f">ler_planilha</span>(<span class="t-s">"inscrit
                     <span data-i18n="skl.g1">Linguagens & Dados</span>
                 </h3>
                 <div class="chips">
-                    <span class="chip chip-hi">Python</span><span class="chip chip-hi">SQL</span><span class="chip chip-hi">Power BI</span><span class="chip chip-hi">Excel Avançado</span>
+                    <span class="chip chip-hi">Python</span><span class="chip chip-hi">SQL</span><span class="chip chip-hi">Power BI</span><span class="chip chip-hi">Excel Avançado</span><span class="chip" data-i18n="skl.numpy">NumPy & Matplotlib</span><span class="chip" data-i18n="skl.dw">Data Warehouse · Big Data</span>
                 </div>
             </div>
             <div class="skill-group glass reveal delay-1">
@@ -445,7 +453,7 @@ participantes = <span class="t-f">ler_planilha</span>(<span class="t-s">"inscrit
                     <span data-i18n="skl.g2">Automação & Engenharia</span>
                 </h3>
                 <div class="chips">
-                    <span class="chip" data-i18n="skl.etl">ETL & Pipelines</span><span class="chip">APIs REST</span><span class="chip">SMTP / E-mail</span><span class="chip" data-i18n="skl.backend">Back-end</span><span class="chip" data-i18n="skl.danalytics">Análise de Dados</span>
+                    <span class="chip" data-i18n="skl.etl">ETL & Pipelines</span><span class="chip">SMTP / E-mail</span><span class="chip" data-i18n="skl.backend">Back-end</span><span class="chip" data-i18n="skl.danalytics">Análise de Dados</span><span class="chip chip-hi" data-i18n="skl.fullstack">Full Stack · FastAPI + SQLAlchemy + PostgreSQL</span><span class="chip" data-i18n="skl.apirest">APIs REST · JSON</span><span class="chip" data-i18n="skl.pdf">Geração de PDF · jsPDF</span><span class="chip" data-i18n="skl.llm">IA Generativa & LLMs · Gemini / LangChain</span>
                 </div>
             </div>
             <div class="skill-group glass reveal delay-2">
@@ -454,7 +462,7 @@ participantes = <span class="t-f">ler_planilha</span>(<span class="t-s">"inscrit
                     <span data-i18n="skl.g3">Infra & Ferramentas</span>
                 </h3>
                 <div class="chips">
-                    <span class="chip">Docker</span><span class="chip">Git & GitHub</span><span class="chip" data-i18n="skl.networks">Redes de Computadores</span><span class="chip" data-i18n="skl.cybersec">Cibersegurança</span><span class="chip" data-i18n="skl.genai">IA Generativa</span><span class="chip" data-i18n="skl.embedded">Sistemas Embarcados · em estudo</span>
+                    <span class="chip">Docker</span><span class="chip">Git & GitHub</span><span class="chip" data-i18n="skl.networks">Redes de Computadores</span><span class="chip chip-hi" data-i18n="skl.cybersec">Cibersegurança</span><span class="chip" data-i18n="skl.genai">IA Generativa</span><span class="chip" data-i18n="skl.embedded">Sistemas Embarcados · em estudo</span><span class="chip chip-hi" data-i18n="skl.webdev">Desenvolvimento Web · Full Stack</span><span class="chip" data-i18n="skl.virt">Virtualização · Windows Server · Active Directory</span><span class="chip" data-i18n="skl.forense">Computação Forense</span>
                 </div>
             </div>
             <div class="skill-group glass reveal delay-3">
@@ -492,7 +500,7 @@ participantes = <span class="t-f">ler_planilha</span>(<span class="t-s">"inscrit
         <div class="section-head reveal">
             <span class="section-tag" data-i18n="ct.tag">// contato</span>
             <h2 data-i18n-html="ct.h2">Vamos construir algo <span class="gradient-text">juntos?</span></h2>
-            <p data-i18n="ct.p">Disponível para oportunidades CLT em dados e para projetos PJ de automação e BI.</p>
+            <p data-i18n="ct.p">Disponível para oportunidades CLT e PJ em dados, automação e desenvolvimento web.</p>
         </div>
         <div class="contact-grid">
             <a href="mailto:henrygabriel2407@gmail.com" class="contact-card glass reveal" id="emailCard">

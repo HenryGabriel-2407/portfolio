@@ -19,7 +19,7 @@ const I18N = {
         'ui.protected': 'Conteúdo protegido — somente visualização',
         'ui.cvFile': 'henry-gabriel-curriculo-ptbr.pdf',
         'hero.badge': 'Disponível para novos projetos', 'hero.hello': 'Olá, eu sou',
-        'hero.desc': 'Transformo dados brutos em decisões rápidas. Da gestão do meu próprio negócio à consultoria, aplico <strong>Python, SQL e Power BI</strong> para automatizar processos e gerar insights que funcionam na prática.',
+        'hero.desc': 'Transformo dados brutos em decisões rápidas e ideias em aplicações reais. Do meu próprio negócio à consultoria, aplico <strong>Python, SQL, Power BI e desenvolvimento web</strong> para automatizar processos, construir interfaces e gerar insights que funcionam na prática.',
         'hero.btnProjects': 'Ver projetos', 'hero.btnCv': 'Currículo',
         'hero.float1t': 'Dados → Decisão', 'hero.float1s': 'análise aplicada',
         'hero.float2t': 'Horas → Minutos', 'hero.float2s': 'automação real',
@@ -40,6 +40,7 @@ const I18N = {
         'srv.c2t': 'Dashboards Interativos', 'srv.c2p': 'Visualizações claras em Power BI ou Excel para acompanhar indicadores em tempo real e apoiar decisões estratégicas.',
         'srv.c3t': 'ETL & Tratamento de Dados', 'srv.c3p': 'Coleta, limpeza e estruturação de dados espalhados em planilhas e sistemas — prontos para análise confiável.',
         'srv.c4t': 'Integração de APIs', 'srv.c4p': 'Conexão entre sistemas via APIs REST: seus dados fluindo automaticamente entre plataformas sem retrabalho.',
+        'srv.c5t': 'Desenvolvimento Web & Full Stack', 'srv.c5p': 'Criação de sites e aplicações web responsivas, do frontend ao backend. Interfaces modernas com HTML, CSS, JavaScript e frameworks front-end.',
         'srv.ctaP': 'Precisa de algo específico?', 'srv.ctaBtn': 'Solicitar orçamento',
         'prj.tag': '// projetos',
         'prj.h2': 'Cases & <span class="gradient-text">projetos</span>',
@@ -81,7 +82,11 @@ const I18N = {
         'skl.g3': 'Infra & Ferramentas', 'skl.g4': 'Idiomas',
         'skl.etl': 'ETL & Pipelines', 'skl.backend': 'Back-end', 'skl.danalytics': 'Análise de Dados',
         'skl.networks': 'Redes de Computadores', 'skl.cybersec': 'Cibersegurança',
-        'skl.genai': 'IA Generativa', 'skl.embedded': 'Sistemas Embarcados · em estudo',
+        'skl.genai': 'IA Generativa', 'skl.embedded': 'Sistemas Embarcados · em estudo', 'skl.webdev': 'Desenvolvimento Web · Full Stack',
+        'skl.apirest': 'APIs REST · JSON', 'skl.fullstack': 'Full Stack · FastAPI + SQLAlchemy + PostgreSQL', 'skl.pdf': 'Geração de PDF · jsPDF',
+        'skl.numpy': 'NumPy & Matplotlib', 'skl.dw': 'Data Warehouse · Big Data',
+        'skl.llm': 'IA Generativa & LLMs · Gemini / LangChain',
+        'skl.virt': 'Virtualização · Windows Server · Active Directory', 'skl.forense': 'Computação Forense',
         'skl.lpt': '🇧🇷 Português — nativo', 'skl.len': '🇺🇸 Inglês — intermediário',
         'skl.les': '🇪🇸 Espanhol — intermediário', 'skl.ljp': '🇯🇵 Japonês — intermediário',
         'crt.tag': '// certificados',
@@ -90,10 +95,10 @@ const I18N = {
         'crt.note': 'Documento protegido — exibição apenas para consulta.',
         'ct.tag': '// contato',
         'ct.h2': 'Vamos construir algo <span class="gradient-text">juntos?</span>',
-        'ct.p': 'Disponível para oportunidades CLT em dados e para projetos PJ de automação e BI.',
+        'ct.p': 'Disponível para oportunidades CLT e PJ em dados, automação e desenvolvimento web.',
         'ct.email': 'E-mail',
         'foot.made': 'feito com café e Python',
-        typed: ['Analista de Dados', 'Automação com Python', 'Power BI & Dashboards', 'ETL & Pipelines']
+        typed: ['Desenvolvimento Web & Full Stack', 'Analista de Dados', 'Automação com Python', 'Power BI & Dashboards', 'ETL & Pipelines']
     },
     en: {
         'doc.title': 'Henry Gabriel — Data Analyst & Automation',
@@ -106,7 +111,7 @@ const I18N = {
         'ui.protected': 'Protected content — view only',
         'ui.cvFile': 'henry-gabriel-resume-en.pdf',
         'hero.badge': 'Available for new projects', 'hero.hello': "Hi, I'm",
-        'hero.desc': "I turn raw data into fast decisions. From running my own business to consulting, I apply <strong>Python, SQL and Power BI</strong> to automate processes and generate insights that work in the real world.",
+        'hero.desc': "I turn raw data into fast decisions and ideas into real applications. From running my own business to consulting, I apply <strong>Python, SQL, Power BI and web development</strong> to automate processes, build interfaces and generate insights that work in the real world.",
         'hero.btnProjects': 'View projects', 'hero.btnCv': 'Currículum',
         'hero.float1t': 'Data → Decision', 'hero.float1s': 'applied analysis',
         'hero.float2t': 'Hours → Minutes', 'hero.float2s': 'real automation',
@@ -127,6 +132,7 @@ const I18N = {
         'srv.c2t': 'Interactive Dashboards', 'srv.c2p': 'Clear visualizations in Power BI or Excel to track indicators in real time and support strategic decisions.',
         'srv.c3t': 'ETL & Data Wrangling', 'srv.c3p': 'Collecting, cleaning and structuring data scattered across spreadsheets and systems — ready for reliable analysis.',
         'srv.c4t': 'API Integration', 'srv.c4p': 'Connecting systems through REST APIs: your data flowing automatically between platforms with no rework.',
+        'srv.c5t': 'Web Development & Full Stack', 'srv.c5p': 'Building responsive websites and web applications, from frontend to backend. Modern interfaces with HTML, CSS, JavaScript and front-end frameworks.',
         'srv.ctaP': 'Need something specific?', 'srv.ctaBtn': 'Request a quote',
         'prj.tag': '// projects',
         'prj.h2': 'Cases & <span class="gradient-text">projects</span>',
@@ -168,7 +174,11 @@ const I18N = {
         'skl.g3': 'Infra & Tools', 'skl.g4': 'Languages',
         'skl.etl': 'ETL & Pipelines', 'skl.backend': 'Back-end', 'skl.danalytics': 'Data Analysis',
         'skl.networks': 'Computer Networks', 'skl.cybersec': 'Cybersecurity',
-        'skl.genai': 'Generative AI', 'skl.embedded': 'Embedded Systems · studying',
+        'skl.genai': 'Generative AI', 'skl.embedded': 'Embedded Systems · studying', 'skl.webdev': 'Web Development · Full Stack',
+        'skl.apirest': 'REST APIs · JSON', 'skl.fullstack': 'Full Stack · FastAPI + SQLAlchemy + PostgreSQL', 'skl.pdf': 'PDF generation · jsPDF',
+        'skl.numpy': 'NumPy & Matplotlib', 'skl.dw': 'Data Warehouse · Big Data',
+        'skl.llm': 'Generative AI & LLMs · Gemini / LangChain',
+        'skl.virt': 'Virtualization · Windows Server · Active Directory', 'skl.forense': 'Digital Forensics',
         'skl.lpt': '🇧🇷 Portuguese — native', 'skl.len': '🇺🇸 English — intermediate',
         'skl.les': '🇪🇸 Spanish — intermediate', 'skl.ljp': '🇯🇵 Japanese — intermediate',
         'crt.tag': '// certificates',
@@ -177,10 +187,10 @@ const I18N = {
         'crt.note': 'Protected document — display for consultation only.',
         'ct.tag': '// contact',
         'ct.h2': 'Shall we build something <span class="gradient-text">together?</span>',
-        'ct.p': 'Available for full-time roles in data and freelance projects in automation and BI.',
+        'ct.p': 'Available for full-time and freelance roles in data, automation and web development.',
         'ct.email': 'Email',
         'foot.made': 'made with coffee and Python',
-        typed: ['Data Analyst', 'Python Automation', 'Power BI & Dashboards', 'ETL & Pipelines']
+        typed: ['Web Development & Full Stack', 'Data Analyst', 'Python Automation', 'Power BI & Dashboards', 'ETL & Pipelines']
     },
     es: {
         'doc.title': 'Henry Gabriel — Analista de Datos & Automatización',
@@ -193,7 +203,7 @@ const I18N = {
         'ui.protected': 'Contenido protegido — solo visualización',
         'ui.cvFile': 'henry-gabriel-cv-es.pdf',
         'hero.badge': 'Disponible para nuevos proyectos', 'hero.hello': 'Hola, soy',
-        'hero.desc': 'Convierto datos crudos en decisiones rápidas. Desde la gestión de mi propio negocio hasta la consultoría, aplico <strong>Python, SQL y Power BI</strong> para automatizar procesos y generar insights que funcionan en la práctica.',
+        'hero.desc': 'Convierto datos crudos en decisiones rápidas e ideas en aplicaciones reales. Desde la gestión de mi propio negocio hasta la consultoría, aplico <strong>Python, SQL, Power BI y desarrollo web</strong> para automatizar procesos, construir interfaces y generar insights que funcionan en la práctica.',
         'hero.btnProjects': 'Ver proyectos', 'hero.btnCv': 'Currículum',
         'hero.float1t': 'Datos → Decisión', 'hero.float1s': 'análisis aplicado',
         'hero.float2t': 'Horas → Minutos', 'hero.float2s': 'automatización real',
@@ -214,6 +224,7 @@ const I18N = {
         'srv.c2t': 'Dashboards Interactivos', 'srv.c2p': 'Visualizaciones claras en Power BI o Excel para seguir indicadores en tiempo real y apoyar decisiones estratégicas.',
         'srv.c3t': 'ETL & Tratamiento de Datos', 'srv.c3p': 'Recolección, limpieza y estructuración de datos dispersos en hojas de cálculo y sistemas — listos para un análisis confiable.',
         'srv.c4t': 'Integración de APIs', 'srv.c4p': 'Conexión entre sistemas vía APIs REST: tus datos fluyendo automáticamente entre plataformas sin retrabajo.',
+        'srv.c5t': 'Desarrollo Web & Full Stack', 'srv.c5p': 'Creación de sitios y aplicaciones web responsivas, del frontend al backend. Interfaces modernas con HTML, CSS, JavaScript y frameworks front-end.',
         'srv.ctaP': '¿Necesitas algo específico?', 'srv.ctaBtn': 'Solicitar presupuesto',
         'prj.tag': '// proyectos',
         'prj.h2': 'Casos & <span class="gradient-text">proyectos</span>',
@@ -255,7 +266,11 @@ const I18N = {
         'skl.g3': 'Infra & Herramientas', 'skl.g4': 'Idiomas',
         'skl.etl': 'ETL & Pipelines', 'skl.backend': 'Back-end', 'skl.danalytics': 'Análisis de Datos',
         'skl.networks': 'Redes de Computadoras', 'skl.cybersec': 'Ciberseguridad',
-        'skl.genai': 'IA Generativa', 'skl.embedded': 'Sistemas Embarcados · en estudio',
+        'skl.genai': 'IA Generativa', 'skl.embedded': 'Sistemas Embarcados · en estudio', 'skl.webdev': 'Desarrollo Web · Full Stack',
+        'skl.apirest': 'APIs REST · JSON', 'skl.fullstack': 'Full Stack · FastAPI + SQLAlchemy + PostgreSQL', 'skl.pdf': 'Generación de PDF · jsPDF',
+        'skl.numpy': 'NumPy & Matplotlib', 'skl.dw': 'Data Warehouse · Big Data',
+        'skl.llm': 'IA Generativa & LLMs · Gemini / LangChain',
+        'skl.virt': 'Virtualización · Windows Server · Active Directory', 'skl.forense': 'Informática Forense',
         'skl.lpt': '🇧🇷 Portugués — nativo', 'skl.len': '🇺🇸 Inglés — intermedio',
         'skl.les': '🇪🇸 Español — intermedio', 'skl.ljp': '🇯🇵 Japonés — intermedio',
         'crt.tag': '// certificados',
@@ -264,10 +279,10 @@ const I18N = {
         'crt.note': 'Documento protegido — visualización solo para consulta.',
         'ct.tag': '// contacto',
         'ct.h2': '¿Construimos algo <span class="gradient-text">juntos?</span>',
-        'ct.p': 'Disponible para oportunidades en relación de dependencia en datos y para proyectos freelance de automatización y BI.',
+        'ct.p': 'Disponible para oportunidades en relación de dependencia y freelance en datos, automatización y desarrollo web.',
         'ct.email': 'Correo',
         'foot.made': 'hecho con café y Python',
-        typed: ['Analista de Datos', 'Automatización con Python', 'Power BI & Dashboards', 'ETL & Pipelines']
+        typed: ['Desarrollo Web & Full Stack', 'Analista de Datos', 'Automatización con Python', 'Power BI & Dashboards', 'ETL & Pipelines']
     }
 };
 
@@ -279,9 +294,9 @@ const CERTS = [
     { slug: 'ia-area-fiscal-estrategia', org: 'Estratégia Concursos', horas: '34h',
       titulo: { pt: 'IA para Concursos — Área Fiscal', en: 'AI for Public Exams — Tax Area', es: 'IA para Oposiciones — Área Fiscal' },
       ano: { pt: 'Jul 2026', en: 'Jul 2026', es: 'Jul 2026' } },
-    { slug: 'aula-magna-lideranca', org: 'Universidade Avantis', horas: '10h',
-      titulo: { pt: 'Aula Magna: Liderança, Tecnologia e Transformação Digital', en: 'Inaugural Lecture: Leadership, Technology and Digital Transformation', es: 'Clase Magistral: Liderazgo, Tecnología y Transformación Digital' },
-      ano: { pt: 'Mar 2026', en: 'Mar 2026', es: 'Mar 2026' } },
+    { slug: 'nano-fiap-dominando-iot', org: 'FIAP', horas: '80h',
+      titulo: { pt: 'Nano: Dominando a IoT — Do Sensor à Nuvem', en: 'Nano: Mastering IoT — From Sensor to Cloud', es: 'Nano: Dominando el IoT — Del Sensor a la Nube' },
+      ano: { pt: '2026', en: '2026', es: '2026' } },
     { slug: 'imersao-frontend-alura', org: 'Alura', horas: '5h',
       titulo: { pt: 'Imersão Front-End — 2ª edição', en: 'Front-End Immersion — 2nd edition', es: 'Inmersión Front-End — 2ª edición' },
       ano: { pt: 'Mar 2025', en: 'Mar 2025', es: 'Mar 2025' } },
@@ -557,7 +572,6 @@ const modalImg = $('#certImage');
 const watermarkEl = $('#watermark');
 const loader = $('#certLoader');
 let currentCert = 0;
-let currentURL = null;
 
 /* marca d'água gerada em SVG (texto repetido na diagonal) */
 function buildWatermark() {
@@ -575,35 +589,32 @@ function buildWatermark() {
     watermarkEl.style.backgroundImage = `url("data:image/svg+xml,${encodeURIComponent(svg)}")`;
 }
 
-async function openCert(i) {
+function openCert(i) {
     currentCert = i;
     const c = CERTS[i];
     $('#modalCertTitle').textContent = c.titulo[LANG];
     $('#modalCertMeta').textContent = `${c.org} · ${c.ano[LANG]} · ${c.horas}`;
 
     loader.classList.remove('hidden');
-    modalImg.removeAttribute('src');
     modal.classList.add('open');
     document.body.style.overflow = 'hidden';
 
-    try {
-        const res = await fetch(`assets/certificados/${c.slug}.jpg`);
-        if (!res.ok) throw new Error(res.status);
-        const blob = await res.blob();
-        if (currentURL) URL.revokeObjectURL(currentURL);
-        currentURL = URL.createObjectURL(blob);
-        modalImg.src = currentURL;
-    } catch {
-        $('#modalCertTitle').textContent = tr('ui.loadError');
-    } finally {
+    /* pré-carrega a imagem antes de exibir (faz o loader sumir quando pronta) */
+    const src = `assets/certificados/${c.slug}.jpg`;
+    modalImg.onload = () => loader.classList.add('hidden');
+    modalImg.onerror = () => {
         loader.classList.add('hidden');
-    }
+        $('#modalCertTitle').textContent = tr('ui.loadError');
+    };
+    modalImg.src = src;
 }
 
 function closeModal() {
     modal.classList.remove('open');
     document.body.style.overflow = '';
-    if (currentURL) { URL.revokeObjectURL(currentURL); currentURL = null; }
+    modalImg.onload = null;
+    modalImg.onerror = null;
+    modalImg.removeAttribute('src');
 }
 
 function navCert(step) {

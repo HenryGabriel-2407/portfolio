@@ -468,7 +468,7 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
    ============================================================ */
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     gap: 18px;
 }
 
@@ -1084,6 +1084,7 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
     .about-grid { grid-template-columns: 1fr; }
     .featured-project { grid-template-columns: 1fr; gap: 28px; padding: 1.8rem; }
     .terminal pre { font-size: .76rem; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media (max-width: 820px) {
@@ -1129,6 +1130,7 @@ button { font-family: inherit; background: none; border: none; color: inherit; c
     .contact-card { flex-direction: row; padding: 1.15rem 1.1rem; }
     .footer-inner { flex-direction: column; text-align: center; }
     .to-top { right: 16px; bottom: 16px; }
+    .services-grid { grid-template-columns: 1fr; }
 
     /* Case destaque em smartphone */
     .featured-project { padding: 1.25rem; border-radius: 18px; gap: 22px; }
